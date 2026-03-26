@@ -10,7 +10,7 @@ sleep 3
 clear
 
 if zenity --question --title="Initialize power-scheduler?"; then
-	zenity --info --text="Selected answer was Y (Yes)." #Replace with Zenity GUI
+	zenity --info --text="Selected answer was Y (Yes)."
 	HOUR=$(zenity --entry --title="Schedule" --text="Please input an hour to schedule a shutdown.")
 	if ! [[ "$HOUR" =~ ^[0-9]+$ ]] || (( HOUR < 0 || HOUR > 23 )); then
     	zenity --warning --title="Invalid hour." --text="Invalid hour. Enter a number between 0 and 23"
@@ -20,7 +20,7 @@ if zenity --question --title="Initialize power-scheduler?"; then
 		zenity --info --text="$SHUT_OUTPUT"
 
 		#Verifies answer
-		if zenity --question --title="Shutdown time persistence" --text="Enable persisten shutdowns?"; then
+		if zenity --question --title="Shutdown time persistence" --text="Enable persistent shutdowns?"; then
 			zenity --info --text="A persistent shutdown has been set."
 		else
 			zenity --info --text="Understood. Ending program"
