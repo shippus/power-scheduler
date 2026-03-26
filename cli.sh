@@ -18,7 +18,7 @@ fi
 sleep 3
 clear
 echo "Initialize program? (y/n)"
-read ANSWER_INTRO
+read ANSWER_INTRO || true
 
 NORMALIZED_ANSWER=$(echo "$ANSWER_INTRO" | tr '[:upper:]' '[:lower:]')
 
@@ -38,7 +38,7 @@ if [[ "$NORMALIZED_ANSWER" == y ]]; then
 		read -p "Enable persistent mode? (y/n) " PERSIST
 		#Normalize answer.
 		if [[ "$PERSIST" != "y" ]]; then
-			PERSIST=$(echo $PERSIST | tr '[:upper:]' '[:lower:]')
+			PERSIST=$(echo "$PERSIST" | tr '[:upper:]' '[:lower:]')
 		fi
 		#Verifies answer
 		if [[ "$PERSIST" == "y" ]]; then
@@ -55,6 +55,6 @@ elif [[ "$NORMALIZED_ANSWER" == n ]]; then
 	exit
 else
 	echo "Please enter a valid answer"
-	./main.sh
+	./cli.sh
 	exit
 fi
