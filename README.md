@@ -1,5 +1,5 @@
 # power-scheduler
-Simple bash GTK utiliy to schedule a shutdown in Linux systems.
+Simple bash GTK utility to schedule a shutdown in Linux systems.
 
 # How to use
 Requirements:
@@ -13,4 +13,7 @@ Then run with `./gui.sh`.
 # Troubleshooting
 
 **Program fails to open**
-Make sure the program has permissions to execute with `sudo chmod +x ./gui.sh && sudo chmod+x ./cli.sh` (This will ask you to log in as sudo).
+Make sure the program has permissions to execute with `sudo chmod +x ./gui.sh && sudo chmod +x ./cli.sh` (This will ask you to log in as sudo).
+
+**Program doesn't schedule a shutdown**
+Run it as `sudo` with `sudo bash gui.sh`.
