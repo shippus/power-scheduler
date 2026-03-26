@@ -1,5 +1,5 @@
 # power-scheduler
-Simple bash GTK utility to schedule a shutdown in Linux systems.
+Simple bash GTK (Zenity) utility to schedule a shutdown in Linux systems.
 
 # How to use
 Requirements:
